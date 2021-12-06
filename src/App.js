@@ -10,6 +10,18 @@ import Footer from "./components/footer/Footer";
 import Cards from "./components/cards/Cards";
 import Crud from "./components/crud/crud";
 
+var url = window.location.href;
+
+var ubicacionSw = '/ProyectoIntegrador/sw.js';
+
+if (navigator.serviceWorker) {
+  if (url.includes('localhost')) {
+    ubicacionSw = '/sw.js';
+
+  }
+  navigator.serviceWorker.register(ubicacionSw);
+}
+
 function App() {
   const [scrollHeight, setScrollHeight] = useState(0);
 
