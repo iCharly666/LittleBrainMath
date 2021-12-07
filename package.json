@@ -2,6 +2,7 @@
   "name": "portfolio-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://iCharly666.github.io/LittleBrainMath",
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.19.26",
     "@testing-library/jest-dom": "^5.11.6",
@@ -11,6 +12,7 @@
     "animate.css-react": "^1.1.0",
     "bootstrap": "^5.1.3",
     "firebase": "^8.10.0",
+    "gh-pages": "^3.2.3",
     "lodash": "^4.17.21",
     "react": "^17.0.1",
     "react-bootstrap": "^2.0.3",
@@ -22,6 +24,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
